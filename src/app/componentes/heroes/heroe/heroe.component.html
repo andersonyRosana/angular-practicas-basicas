@@ -1,0 +1,26 @@
+<h1>Component Heroe</h1>
+
+<dl>
+  <td>Nombre</td>
+  <dd>{{nombre}} </dd>
+
+  <td>Edad</td>
+  <dd>{{edad}} </dd>
+
+  <td>Datos</td>
+  <dd>{{ obtenerDatos() }} </dd>
+
+  <td> Datos Capitalizado</td>
+  <dd>{{ nombre.toUpperCase() }} </dd>
+
+  <td>Datos Capitalizado con Get</td>
+  <dd>{{ nombrecapitalizado }} </dd>
+
+</dl>
+
+<button (click)="chanceName()">Cambiar Heroe</button>
+<button (click)="cambiarNombre()">Cambiar Heroe</button>
+<h2> {{nombre}} </h2>
+
+<button (click)="chanceEdad()" >Cambiar Edad</button>
+<h2>{{ edad }}</h2>

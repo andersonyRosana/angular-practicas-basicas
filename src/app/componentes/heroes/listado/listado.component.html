@@ -1,0 +1,36 @@
+<h1>component Listado</h1>
+
+<button (click)="adicionarNumero()">Sumar</button>
+<button (click)="restarNumero()">restar</button>
+<h1>{{numero}}</h1>
+
+<!--------------------------------------------------------------------------------->
+
+<h1>Listado de Heroes</h1>
+
+<!--<ul>-->
+<!--  <li>{{ heroes[0] }}</li>-->
+<!--  <li>{{ heroes[1] }}</li>-->
+<!--  <li>{{ heroes[2] }}</li>-->
+<!--  <li>{{ heroes[3] }}</li>-->
+<!--</ul>-->
+
+<div *ngIf="heroeBorrado else noBorrado" >
+  <h1>Heroe borrado: <small>{{heroeBorrado}}</small></h1>
+</div>
+
+<ng-template #noBorrado>
+  <h1>Heroe Aun no ha sido borrado</h1>
+</ng-template>
+
+
+<button (click)="borrarHerroeyalmacenar()">borrar</button>
+
+<ul *ngFor="let heroe of heroes, let i = index">
+  <li>{{ heroe  }} {{i}}</li>
+</ul >
+
+<!--<button (click)="borrarHeroe()">borrar</button>-->
+
+
+
